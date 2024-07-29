@@ -6,6 +6,7 @@ from langchain.prompts import (
     HumanMessagePromptTemplate,
     ChatPromptTemplate,
 )
+from langchain_core.output_parsers import StrOutputParser
 
 dotenv.load_dotenv()
 
@@ -45,4 +46,8 @@ review_prompt_template = ChatPromptTemplate(
 
 chat_model = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
 
-review_chain = review_prompt_template | chat_model
+output_parser = StrOutputParser()
+
+#  You can chain together complex pipelines to create chatbot, and you end up with 
+# an object that executes pipeline in a single method call. 
+review_chain = review_prompt_template | chat_model | output_parser
