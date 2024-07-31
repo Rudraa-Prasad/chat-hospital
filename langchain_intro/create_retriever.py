@@ -7,8 +7,12 @@ from langchain_openai import OpenAIEmbeddings
 REVIEWS_CSV_PATH = "data/reviews.csv"
 REVIEWS_CHROMA_PATH = "chroma_data"
 dotenv.load_dotenv()
+import sys 
+print(sys.executable)
+import sqlite3
+print(sqlite3.sqlite_version)
 
 loader = CSVLoader(file_path = REVIEWS_CSV_PATH, source_column = "review")
 reviews = loader.load()
-
+ 
 reviews_vector_db = Chroma.from_documents(reviews, OpenAIEmbeddings(), persist_directory = REVIEWS_CHROMA_PATH)
