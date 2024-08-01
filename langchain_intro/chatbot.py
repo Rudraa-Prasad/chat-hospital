@@ -1,3 +1,6 @@
+'''chatbot passing prompt by defining here only , noy using ChromaBD'''
+
+
 import dotenv
 from langchain_openai import ChatOpenAI
 from langchain.prompts import (

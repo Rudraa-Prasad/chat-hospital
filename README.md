@@ -1,4 +1,4 @@
-branch of main
-added gitignore
+chatbot based on hospital data, reviews of patients.
 
-edited from vscode
+ref - link
+https://realpython.com/build-llm-rag-chatbot-with-langchain/
