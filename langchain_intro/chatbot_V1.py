@@ -1,11 +1,11 @@
 '''chatbot - passing prompt {context} from  ChromaDB'''
-
+''' to activate this chatbot run query_V1.py'''
 
 import dotenv
 from langchain_openai import ChatOpenAI
 from langchain.prompts import (
     PromptTemplate,
-    SystemMessagePromptTemplate,
+    SystemMessagePromptTemplate, 
     HumanMessagePromptTemplate,
     ChatPromptTemplate,
 )
