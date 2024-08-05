@@ -7,7 +7,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 
 
-REVIEWS_CSV_PATH = "data/reviews.csv"
+REVIEWS_CSV_PATH = "/workspaces/chat-hospital/data/reviews.csv"
 REVIEWS_CHROMA_PATH = "chroma_data"
 dotenv.load_dotenv()
 
