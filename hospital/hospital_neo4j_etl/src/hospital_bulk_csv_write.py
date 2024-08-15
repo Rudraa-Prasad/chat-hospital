@@ -38,7 +38,7 @@ def _set_uniqueness_constraints(tx, node):
 
 
 '''load_hospital_graph_from_csv function is designed to load structured hospital data 
-from a CSV file into a Neo4j graph database. It ensures that certain uniqueness constraints are set 
+from a CSV file into a Neo4j graph database. It ensures that c    ertain uniqueness constraints are set 
 on the nodes before loading the data.'''
 #In load_hospital_graph_from_csv(), we instantiate a driver that connects to our Neo4j instance 
 # and set uniqueness constraints for each hospital system node.
