@@ -1,3 +1,4 @@
 .gitignore
 .env
 .venv/
+/workspaces/chat-hospital/hospital/.env
