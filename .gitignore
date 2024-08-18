@@ -2,3 +2,6 @@
 .env
 .venv/
 /workspaces/chat-hospital/hospital/.env
+/workspaces/chat-hospital/hospital/.venv
+/workspaces/chat-hospital/hospital/learning.txt
+/workspaces/chat-hospital/hospital/chatbot_api/.pypirc

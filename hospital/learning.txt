@@ -1,0 +1,65 @@
+##  bash script ##
+# Step 1: Create a virtual environment
+python3 -m venv .venv
+
+# Step 2: Activate the virtual environment
+source .venv/bin/activate
+
+# Step 3: Install dependencies
+pip install -r requirements.txt
+
+# Step 4: Deactivate the virtual environment (when done)
+deactivate
+
+
+
+Differences Between "python -m pip install ." and requirements.txt:
+python -m pip install .: This installs the package defined in the current directory
+ (typically using the setup.py or pyproject.toml file), along with its dependencies as 
+ specified in those configuration files.
+
+Used when you are installing the package you are developing.
+Installs dependencies defined within the package's configuration.
+requirements.txt: This installs external packages listed in the file.
+
+Typically used for setting up the environment with the correct dependencies.
+Ensures all dependencies are installed in the correct versions for the project to run properly.
+The Key Difference:
+requirements.txt is used to install external packages (like pandas) that your project depends on.
+pip install . is used to install your own project as a package (along with its dependencies,
+ like pandas) so that you or others can run your project.
+
+
+ chatbot/
+├── chatbot_api/
+│   ├── __init__.py
+│   └── your_module.py
+├── pyproject.toml
+├── README.md
+├── LICENSE
+└── setup.cfg  # Optional, if you use setup.cfg for configuration
+
+
+
+#### PyPi account 
+PyPI recovery codes
+aec5eef1704b7cb2 - used
+81576ea0f96c27b8
+4201ae6667ca1b5e
+7deb63f58fedd3ce
+ecf80f2f244b3b33
+913c7b586f44617a
+27dc62e088d421ed
+c19d310735d3c143
+
+
+
+'''reviews_vector_chain.combine_documents_chain.llm_chain.prompt = review_prompt '''
+Default Prompt: When you create the reviews_vector_chain using RetrievalQA.from_chain_type(), 
+it automatically uses a default prompt for the language model. This prompt is part of the internal
+ logic of the chain and is used unless you explicitly change it.
+
+Explicit Override: Even though you define review_prompt separately, the chain doesn’t 
+automatically know to use it. 
+By writing reviews_vector_chain.combine_documents_chain.llm_chain.prompt = review_prompt, 
+you are explicitly telling the chain, "Use my custom prompt (review_prompt) instead of the default one."
